@@ -9,6 +9,7 @@ if (figma.editorType === "figjam") {
   // Calls to "parent.postMessage" from within the HTML page will trigger this
   // callback. The callback will be passed the "pluginMessage" property of the
   // posted message.
+
   figma.ui.onmessage = async (msg: { type: string; prompt: string }) => {
     // One way of distinguishing between different types of messages sent from
     // your HTML page is to use an object with a "type" property like this.
@@ -327,7 +328,7 @@ if (figma.editorType === "figjam") {
         },
       ];
 
-      const dummyNew = [
+      const dummyNew: any = [
         {
           title: "Ana Giriş Ekranı",
           color: { r: 0.6, g: 0.8, b: 1 }, // Pastel mavi
